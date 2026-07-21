@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "filename": "download (1).jpeg",
+    "path": "fotos/download (1).jpeg"
+  },
+  {
+    "filename": "download (2).jpeg",
+    "path": "fotos/download (2).jpeg"
+  },
+  {
+    "filename": "download (3).jpeg",
+    "path": "fotos/download (3).jpeg"
+  },
+  {
+    "filename": "download (4).jpeg",
+    "path": "fotos/download (4).jpeg"
+  },
+  {
+    "filename": "download.jpeg",
+    "path": "fotos/download.jpeg"
+  },
+  {
+    "filename": "download.png",
+    "path": "fotos/download.png"
+  }
+]
