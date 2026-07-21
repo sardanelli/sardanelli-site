@@ -19,7 +19,6 @@ jobs:
         run: |
           python3 << 'EOF'
           import json
-          import os
           from pathlib import Path
 
           fotos_dir = Path('fotos')
@@ -28,10 +27,7 @@ jobs:
           if fotos_dir.exists():
               for img in sorted(fotos_dir.glob('*')):
                   if img.suffix.lower() in ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.avif']:
-                      gallery.append({
-                          'filename': img.name,
-                          'path': f'fotos/{img.name}'
-                      })
+                      gallery.append(f'fotos/{img.name}')
 
           with open('gallery.json', 'w', encoding='utf-8') as f:
               json.dump(gallery, f, indent=2, ensure_ascii=False)
