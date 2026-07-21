@@ -16,7 +16,7 @@ $hero    = $siteContent['hero'] ?? [
     'tag' => 'Desde 2016 transformando momentos em',
     't1' => 'Experiências', 't2' => 'Inesquecíveis',
     'sub' => 'Casamentos, Chás Revelação, Formaturas e Eventos Corporativos com efeitos especiais que encantam e emocionam.',
-    'btn' => 'Assista nossos Vídeos'
+    'btn' => 'Ver Pacotes'
 ];
 
 $sobre   = $siteContent['sobre'] ?? [
@@ -41,10 +41,6 @@ $efeitos = $siteContent['efeitos'] ?? [
 $pacotes = $siteContent['pacotes'] ?? [];
 $videos  = $siteContent['videos'] ?? ['nYcqAYoVNEg','WySiyUZ_TZ0','SrEQbd28EPo','1izdP3T-qGs','TWwZjAx42Uk','v2cInNWsd5A','KwutXIYu1fI','HUveuBzkBZw'];
 $contato = $siteContent['contato'] ?? ['wa' => '5516993950765', 'insta' => 'https://www.instagram.com/sardanelliproducoes/'];
-$footer  = $siteContent['footer'] ?? [
-    'logo' => 'intro-logo.png',
-    'copyright' => '© ' . date('Y') . ' Sardanelli Produções. Todos os direitos reservados.'
-];
 $seo     = $siteContent['seo'] ?? [
     'title' => 'Sardanelli Produções | Efeitos Especiais para Eventos',
     'desc' => 'Sardanelli Produções — Efeitos especiais para casamentos, chás revelação, formaturas e eventos corporativos. Transformamos momentos em experiências inesquecíveis desde 2016.',
@@ -55,8 +51,6 @@ $seo     = $siteContent['seo'] ?? [
 
 $waLink = "https://wa.me/" . htmlspecialchars($contato['wa'] ?? '5516993950765');
 $instaLink = htmlspecialchars($contato['insta'] ?? 'https://www.instagram.com/sardanelliproducoes/');
-$footerLogo = htmlspecialchars($footer['logo'] ?? 'intro-logo.png');
-$footerCopy = htmlspecialchars($footer['copyright'] ?? ('© ' . date('Y') . ' Sardanelli Produções. Todos os direitos reservados.'));
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -107,9 +101,9 @@ $footerCopy = htmlspecialchars($footer['copyright'] ?? ('© ' . date('Y') . ' Sa
         <ul>
           <li><a href="#inicio" class="nav-link">Início</a></li>
           <li><a href="#sobre" class="nav-link">Quem Somos</a></li>
-          <li><a href="#videos" class="nav-link">Vídeos</a></li>
           <li><a href="#efeitos" class="nav-link">Efeitos</a></li>
           <li><a href="#pacotes" class="nav-link">Pacotes</a></li>
+          <li><a href="#videos" class="nav-link">Vídeos</a></li>
           <li><a href="#contato" class="nav-link" id="cta-nav-btn">Orçamento</a></li>
         </ul>
       </nav>
@@ -127,7 +121,7 @@ $footerCopy = htmlspecialchars($footer['copyright'] ?? ('© ' . date('Y') . ' Sa
       <h1 class="hero-title"><?= htmlspecialchars($hero['t1']) ?><br /><span class="gold"><?= htmlspecialchars($hero['t2']) ?></span></h1>
       <p class="hero-subtitle"><?= htmlspecialchars($hero['sub']) ?></p>
       <div class="hero-cta-group">
-        <a href="#videos" class="btn btn-primary"><?= htmlspecialchars($hero['btn']) ?></a>
+        <a href="#pacotes" class="btn btn-primary"><?= htmlspecialchars($hero['btn']) ?></a>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -188,29 +182,6 @@ $footerCopy = htmlspecialchars($footer['copyright'] ?? ('© ' . date('Y') . ' Sa
     </div>
   </section>
 
-  <!-- ===== VÍDEOS ===== -->
-  <section id="videos" class="section videos">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Em Ação</span>
-        <h2 class="section-title">Veja a magia <span class="gold">acontecer</span></h2>
-        <p class="section-desc">Assista aos nossos vídeos e sinta a energia de um show de efeitos especiais Sardanelli Produções.</p>
-      </div>
-      <div class="videos-grid" id="videos-grid">
-        <?php foreach ($videos as $vId): if (empty(trim($vId))) continue; ?>
-        <div class="video-card glass" data-video-id="<?= htmlspecialchars(trim($vId)) ?>">
-          <div class="video-thumb-wrap">
-            <img src="https://img.youtube.com/vi/<?= htmlspecialchars(trim($vId)) ?>/hqdefault.jpg" alt="Vídeo Sardanelli Produções" loading="lazy" />
-            <button class="video-play-btn" aria-label="Reproduzir vídeo">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-          </div>
-        </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== EFEITOS ===== -->
   <section id="efeitos" class="section efeitos">
     <div class="container">
@@ -264,6 +235,28 @@ $footerCopy = htmlspecialchars($footer['copyright'] ?? ('© ' . date('Y') . ' Sa
     </div>
   </section>
 
+  <!-- ===== VÍDEOS ===== -->
+  <section id="videos" class="section videos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Em Ação</span>
+        <h2 class="section-title">Veja a magia <span class="gold">acontecer</span></h2>
+        <p class="section-desc">Assista aos nossos vídeos e sinta a energia de um show de efeitos especiais Sardanelli Produções.</p>
+      </div>
+      <div class="videos-grid" id="videos-grid">
+        <?php foreach ($videos as $vId): if (empty(trim($vId))) continue; ?>
+        <div class="video-card glass" data-video-id="<?= htmlspecialchars(trim($vId)) ?>">
+          <div class="video-thumb-wrap">
+            <img src="https://img.youtube.com/vi/<?= htmlspecialchars(trim($vId)) ?>/hqdefault.jpg" alt="Vídeo Sardanelli Produções" loading="lazy" />
+            <button class="video-play-btn" aria-label="Reproduzir vídeo">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+          </div>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== VÍDEO MODAL ===== -->
   <div id="video-modal" class="video-modal" role="dialog" aria-modal="true" aria-label="Reprodutor de vídeo">
@@ -294,13 +287,10 @@ $footerCopy = htmlspecialchars($footer['copyright'] ?? ('© ' . date('Y') . ' Sa
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer id="footer" class="footer">
+  <footer id="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="<?= $footerLogo ?>" alt="Sardanelli Produções" class="footer-logo-img" />
-      </div>
-      <p class="footer-copy"><?= $footerCopy ?></p>
-      <div class="footer-links">
+      <p>&copy; <?= date('Y') ?> Sardanelli Produções. Todos os direitos reservados.</p>
+      <div class="footer-social">
         <a href="<?= $instaLink ?>" target="_blank" rel="noopener" id="footer-instagram">Instagram</a>
         <a href="<?= $waLink ?>" target="_blank" rel="noopener" id="footer-whatsapp">WhatsApp</a>
       </div>
