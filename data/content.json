@@ -4,7 +4,7 @@
     "t1": "Experiências",
     "t2": "Inesquecíveis",
     "sub": "Casamentos, Chás Revelação, Formaturas e Eventos Corporativos com efeitos especiais que encantam e emocionam.",
-    "btn": "Ver Pacotes"
+    "btn": "Assista nossos Vídeos"
   },
   "sobre": {
     "tag": "Quem Somos",
@@ -20,14 +20,46 @@
     "satisf": "100%"
   },
   "efeitos": [
-    {"nome": "Rastro de Céu Noturno", "desc": "Uso recomendado: Noturno, local aberto.", "tag": "Noturno"},
-    {"nome": "Rastro de Céu Diurno", "desc": "Uso recomendado: Diurno, local aberto.", "tag": "Diurno"},
-    {"nome": "Disparador de Serpentina", "desc": "Uso recomendado: Diurno ou noturno, local aberto ou fechado.", "tag": "Versátil"},
-    {"nome": "Disparador de Papel Colorido", "desc": "Uso recomendado: Diurno ou noturno, local aberto ou fechado.", "tag": "Versátil"},
-    {"nome": "Fumaça Colorida", "desc": "Uso recomendado: Diurno ou noturno, local aberto.", "tag": "Impacto visual"},
-    {"nome": "Disparador de Pó Colorido", "desc": "Uso recomendado: Diurno ou noturno, local aberto.", "tag": "Colorido"},
-    {"nome": "Simulador de Faíscas", "desc": "Uso recomendado: Diurno ou noturno, local aberto ou fechado.", "tag": "Premium"},
-    {"nome": "Disparos de Comemoração", "desc": "Efeito sonoro e visual para comemoração. Diurno ou noturno, aberto ou fechado.", "tag": "Explosivo"}
+    {
+      "nome": "Rastro de Céu Noturno",
+      "desc": "Uso recomendado: Noturno, local aberto.",
+      "tag": "Noturno"
+    },
+    {
+      "nome": "Rastro de Céu Diurno",
+      "desc": "Uso recomendado: Diurno, local aberto.",
+      "tag": "Diurno"
+    },
+    {
+      "nome": "Disparador de Serpentina",
+      "desc": "Uso recomendado: Diurno ou noturno, local aberto ou fechado.",
+      "tag": "Versátil"
+    },
+    {
+      "nome": "Disparador de Papel Colorido",
+      "desc": "Uso recomendado: Diurno ou noturno, local aberto ou fechado.",
+      "tag": "Versátil"
+    },
+    {
+      "nome": "Fumaça Colorida",
+      "desc": "Uso recomendado: Diurno ou noturno, local aberto.",
+      "tag": "Impacto visual"
+    },
+    {
+      "nome": "Disparador de Pó Colorido",
+      "desc": "Uso recomendado: Diurno ou noturno, local aberto.",
+      "tag": "Colorido"
+    },
+    {
+      "nome": "Simulador de Faíscas",
+      "desc": "Uso recomendado: Diurno ou noturno, local aberto ou fechado.",
+      "tag": "Premium"
+    },
+    {
+      "nome": "Disparos de Comemoração",
+      "desc": "Efeito sonoro e visual para comemoração. Diurno ou noturno, aberto ou fechado.",
+      "tag": "Explosivo"
+    }
   ],
   "pacotes": [
     {
@@ -74,10 +106,23 @@
       "waMsg": "Olá! Quero o *Pacote Completo* (Papel x6, Serpentina x6, Fumaça x4, Rastro de Céu, Faíscas x4, Tiro de Céu). Pode me enviar o orçamento?"
     }
   ],
-  "videos": ["nYcqAYoVNEg","WySiyUZ_TZ0","SrEQbd28EPo","1izdP3T-qGs","TWwZjAx42Uk","v2cInNWsd5A","KwutXIYu1fI","HUveuBzkBZw"],
+  "videos": [
+    "nYcqAYoVNEg",
+    "WySiyUZ_TZ0",
+    "SrEQbd28EPo",
+    "1izdP3T-qGs",
+    "TWwZjAx42Uk",
+    "v2cInNWsd5A",
+    "KwutXIYu1fI",
+    "HUveuBzkBZw"
+  ],
   "contato": {
     "wa": "5516993950765",
     "insta": "https://www.instagram.com/sardanelliproducoes/"
+  },
+  "footer": {
+    "logo": "intro-logo.png",
+    "copyright": "© 2026 Sardanelli Produções. Todos os direitos reservados."
   },
   "seo": {
     "title": "Sardanelli Produções | Efeitos Especiais para Eventos",

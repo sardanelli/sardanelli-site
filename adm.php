@@ -26,7 +26,7 @@ if (!file_exists($contentFile)) {
             'tag' => 'Desde 2016 transformando momentos em',
             't1' => 'Experiências', 't2' => 'Inesquecíveis',
             'sub' => 'Casamentos, Chás Revelação, Formaturas e Eventos Corporativos com efeitos especiais que encantam e emocionam.',
-            'btn' => 'Ver Pacotes'
+            'btn' => 'Assista nossos Vídeos'
         ],
         'sobre' => [
             'tag' => 'Quem Somos', 't1' => 'Uma história escrita ', 't2' => 'com emoção',
@@ -64,6 +64,7 @@ if (!file_exists($contentFile)) {
         ],
         'videos' => ['nYcqAYoVNEg','WySiyUZ_TZ0','SrEQbd28EPo','1izdP3T-qGs','TWwZjAx42Uk','v2cInNWsd5A','KwutXIYu1fI','HUveuBzkBZw'],
         'contato' => [ 'wa' => '5516993950765', 'insta' => 'https://www.instagram.com/sardanelliproducoes/' ],
+        'footer' => [ 'logo' => 'intro-logo.png', 'copyright' => '© 2026 Sardanelli Produções. Todos os direitos reservados.' ],
         'seo' => [
             'title' => 'Sardanelli Produções | Efeitos Especiais para Eventos',
             'desc' => 'Sardanelli Produções — Efeitos especiais para casamentos, chás revelação, formaturas e eventos corporativos. Transformamos momentos em experiências inesquecíveis desde 2016.',
@@ -1027,6 +1028,10 @@ if (isset($_GET['api']) || isset($_POST['api'])) {
           Vídeos
           <span class="sb-badge" id="sb-videos-count">8</span>
         </div>
+        <div class="sb-link" data-view="footer">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+          Rodapé
+        </div>
       </div>
       <div class="sb-nav-group">
         <div class="sb-group-title">Configurações</div>
@@ -1199,7 +1204,7 @@ if (isset($_GET['api']) || isset($_POST['api'])) {
             </div>
             <div class="field">
               <label>Texto do Botão CTA</label>
-              <input type="text" id="hero-btn" value="Ver Pacotes" />
+              <input type="text" id="hero-btn" value="Assista nossos Vídeos" />
             </div>
           </div>
           <div>
@@ -1207,7 +1212,7 @@ if (isset($_GET['api']) || isset($_POST['api'])) {
               <span style="font-size:0.72rem; color:var(--gold); background:rgba(255,186,0,0.08); border:1px solid rgba(255,186,0,0.25); padding:4px 14px; border-radius:100px;" id="prev-hero-tag">Desde 2016 transformando momentos em</span>
               <div style="font-family:var(--font-d); font-size:1.8rem; font-weight:900; line-height:1.1; color:#fff;" id="prev-hero-title">Experiências<br><span style="color:var(--gold);" id="prev-hero-t2">Inesquecíveis</span></div>
               <p style="font-size:0.8rem; color:var(--muted); max-width:260px; line-height:1.6;" id="prev-hero-sub">Casamentos, Chás Revelação, Formaturas e Eventos Corporativos com efeitos especiais.</p>
-              <span style="background:var(--gold); color:#1a1228; padding:8px 20px; border-radius:10px; font-size:0.85rem; font-weight:700;" id="prev-hero-btn">Ver Pacotes</span>
+              <span style="background:var(--gold); color:#1a1228; padding:8px 20px; border-radius:10px; font-size:0.85rem; font-weight:700;" id="prev-hero-btn">Assista nossos Vídeos</span>
             </div>
             <div class="field-hint" style="margin-top:8px;">👆 Pré-visualização em tempo real</div>
           </div>
@@ -1417,6 +1422,90 @@ if (isset($_GET['api']) || isset($_POST['api'])) {
         </div>
         <div class="action-bar">
           <button class="btn btn-gold" onclick="saveSection('contato')">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Salvar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <div class="view" data-view="footer">
+      <div class="page-hd">
+        <div class="page-hd-left">
+          <span class="page-tag">Conteúdo</span>
+          <h2>Rodapé</h2>
+          <p>Edite a logo, o texto de direitos autorais e as redes sociais exibidas no rodapé do site</p>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-bottom:20px;">
+        <div class="panel-hd">
+          <div class="panel-hd-left">
+            <div class="panel-hd-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M18 22.5H6a2.25 2.25 0 01-2.25-2.25V3.75A2.25 2.25 0 016 1.5h9.879a2.25 2.25 0 011.591.659l4.121 4.121a2.25 2.25 0 01.659 1.591V20.25A2.25 2.25 0 0118 22.5zM10.5 8.25a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg></div>
+            <div><div class="panel-title">Logo do rodapé</div><div class="panel-sub">Imagem exibida acima do texto de direitos autorais</div></div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+          <div style="width:120px;height:80px;border-radius:10px;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;">
+            <img id="footer-logo-preview" src="intro-logo.png" alt="Logo do rodapé" style="max-width:100%;max-height:100%;object-fit:contain;" />
+          </div>
+          <div style="flex:1;min-width:200px;">
+            <label class="btn btn-outline btn-sm" for="footer-logo-input" style="cursor:pointer;display:inline-flex;">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M7.5 7.5L12 3m0 0l4.5 4.5M12 3v13.5"/></svg>
+              Enviar nova logo
+            </label>
+            <input type="file" id="footer-logo-input" accept=".jpg,.jpeg,.png,.webp" style="display:none;" onchange="uploadFooterLogo(this)" />
+            <div class="field-hint" id="footer-logo-status" style="margin-top:8px;">Formatos aceitos: JPG, PNG ou WEBP.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-bottom:20px;">
+        <div class="panel-hd">
+          <div class="panel-hd-left">
+            <div class="panel-hd-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309a5.342 5.342 0 01-.018-.447z"/></svg></div>
+            <div><div class="panel-title">Texto de direitos autorais</div><div class="panel-sub">Exibido logo abaixo da logo, no rodapé</div></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Texto de copyright</label>
+          <input type="text" id="footer-copyright" value="© 2026 Sardanelli Produções. Todos os direitos reservados." placeholder="© 2026 Sardanelli Produções. Todos os direitos reservados." />
+          <div class="field-hint">Dica: atualize o ano manualmente sempre que virar o ano.</div>
+        </div>
+        <div class="action-bar">
+          <button class="btn btn-outline" onclick="exportSection('footer')">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            Ver código para o index.html
+          </button>
+          <button class="btn btn-gold" onclick="saveSection('footer')">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Salvar
+          </button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-hd">
+          <div class="panel-hd-left">
+            <div class="panel-hd-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></div>
+            <div><div class="panel-title">Redes sociais</div><div class="panel-sub">Os mesmos links usados nos botões de WhatsApp do site inteiro</div></div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Número do WhatsApp (com código do país, sem + e sem espaços)</label>
+          <input type="text" id="footer-wa-num" value="5516993950765" placeholder="5516999999999" />
+        </div>
+        <div>
+          <div class="field-hint" style="margin-bottom:6px;">Prévia do link:</div>
+          <div class="wa-preview" id="footer-wa-preview">https://wa.me/5516993950765</div>
+        </div>
+        <div class="field" style="margin-top:16px;">
+          <label>URL do Instagram</label>
+          <input type="text" id="footer-insta-url" value="https://www.instagram.com/sardanelliproducoes/" />
+        </div>
+        <div class="action-bar">
+          <button class="btn btn-gold" onclick="saveSection('footer')">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
             Salvar
           </button>
@@ -1717,7 +1806,7 @@ const DEFAULTS = {
     tag: 'Desde 2016 transformando momentos em',
     t1: 'Experiências', t2: 'Inesquecíveis',
     sub: 'Casamentos, Chás Revelação, Formaturas e Eventos Corporativos com efeitos especiais que encantam e emocionam.',
-    btn: 'Ver Pacotes'
+    btn: 'Assista nossos Vídeos'
   },
   sobre: {
     tag:'Quem Somos', t1:'Uma história escrita ', t2:'com emoção',
@@ -1749,6 +1838,7 @@ const DEFAULTS = {
   ],
   videos: ['nYcqAYoVNEg','WySiyUZ_TZ0','SrEQbd28EPo','1izdP3T-qGs','TWwZjAx42Uk','v2cInNWsd5A','KwutXIYu1fI','HUveuBzkBZw'],
   contato: { wa:'5516993950765', insta:'https://www.instagram.com/sardanelliproducoes/' },
+  footer: { logo:'intro-logo.png', copyright:'© 2026 Sardanelli Produções. Todos os direitos reservados.' },
   seo: {
     title:'Sardanelli Produções | Efeitos Especiais para Eventos',
     desc:'Sardanelli Produções — Efeitos especiais para casamentos, chás revelação, formaturas e eventos corporativos. Transformamos momentos em experiências inesquecíveis desde 2016.',
@@ -2224,6 +2314,12 @@ function saveSection(sec) {
     });
   } else if (sec === 'contato') {
     state.contato = { wa: v('wa-num'), insta: v('insta-url') };
+    syncContatoFields();
+  } else if (sec === 'footer') {
+    if (!state.footer) state.footer = JSON.parse(JSON.stringify(DEFAULTS.footer));
+    state.footer.copyright = v('footer-copyright');
+    state.contato = { wa: v('footer-wa-num'), insta: v('footer-insta-url') };
+    syncContatoFields();
   } else if (sec === 'seo') {
     state.seo = {
       title: v('seo-title'), desc: v('seo-desc'), kw: v('seo-kw'),
@@ -2232,6 +2328,51 @@ function saveSection(sec) {
   }
   saveState();
   toast('✅ Alterações salvas!', 'success');
+}
+
+function syncContatoFields() {
+  const c = get('contato');
+  setVal('wa-num', c.wa); setVal('insta-url', c.insta);
+  setVal('footer-wa-num', c.wa); setVal('footer-insta-url', c.insta);
+  const p1 = document.getElementById('wa-preview');
+  if (p1) p1.textContent = `https://wa.me/${c.wa}`;
+  const p2 = document.getElementById('footer-wa-preview');
+  if (p2) p2.textContent = `https://wa.me/${c.wa}`;
+}
+
+function uploadFooterLogo(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+
+  const status = document.getElementById('footer-logo-status');
+  status.textContent = 'Enviando...';
+
+  const formData = new FormData();
+  formData.append('api', '1');
+  formData.append('action', 'upload_file');
+  formData.append('csrf_token', getCsrfToken());
+  formData.append('file', file);
+
+  fetch('adm.php', { method: 'POST', body: formData })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        if (!state.footer) state.footer = JSON.parse(JSON.stringify(DEFAULTS.footer));
+        state.footer.logo = data.url;
+        document.getElementById('footer-logo-preview').src = data.url;
+        status.textContent = 'Formatos aceitos: JPG, PNG ou WEBP.';
+        saveState();
+        toast('✅ Logo do rodapé atualizada!', 'success');
+      } else {
+        status.textContent = 'Formatos aceitos: JPG, PNG ou WEBP.';
+        toast('❌ Erro ao enviar logo: ' + (data.error || ''), 'error');
+      }
+    })
+    .catch(() => {
+      status.textContent = 'Formatos aceitos: JPG, PNG ou WEBP.';
+      toast('❌ Erro de rede ao enviar logo', 'error');
+    })
+    .finally(() => { input.value = ''; });
 }
 
 function resetSection(sec) {
@@ -2349,6 +2490,25 @@ ${p.itens.map(item => `    <li>${checkSVG} ${item}</li>`).join('\n')}
     instructions = 'Substitua todas as ocorrências de números no <code>index.html</code> pelo novo número:';
     filename = 'whatsapp_links.txt';
     code = `NOVO NÚMERO: ${c.wa}\nLINK BASE: https://wa.me/${c.wa}\nINSTAGRAM: ${c.insta}`;
+  } else if (sec === 'footer') {
+    const f = get('footer');
+    const c2 = get('contato');
+    title = 'Exportar — Rodapé';
+    instructions = 'Substitua o bloco <strong>&lt;footer class="footer"&gt;</strong> no arquivo <code>index.html</code> por este código:';
+    filename = 'footer_section.html';
+    code = `<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="${f.logo}" alt="Sardanelli Produções" class="footer-logo-img" />
+    </div>
+    <p class="footer-copy">${esc(f.copyright)}</p>
+    <div class="footer-links">
+      <a href="${c2.insta}" target="_blank" rel="noopener" id="footer-instagram">Instagram</a>
+      <a href="https://wa.me/${c2.wa}" target="_blank" rel="noopener" id="footer-whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</footer>`;
   } else if (sec === 'seo') {
     const s = get('seo');
     title = 'Exportar — Meta Tags SEO';
@@ -2451,9 +2611,12 @@ function initPanel() {
   const st = get('stats');
   setVal('stat-eventos', st.eventos); setVal('stat-anos', st.anos); setVal('stat-satisf', st.satisf);
 
-  const c = get('contato');
-  setVal('wa-num', c.wa); setVal('insta-url', c.insta);
-  document.getElementById('wa-preview').textContent = `https://wa.me/${c.wa}`;
+  const f = get('footer');
+  setVal('footer-copyright', f.copyright);
+  const flp = document.getElementById('footer-logo-preview');
+  if (flp) flp.src = f.logo;
+
+  syncContatoFields();
 
   const seo = get('seo');
   setVal('seo-title', seo.title); setVal('seo-desc', seo.desc); setVal('seo-kw', seo.kw);
