@@ -585,49 +585,63 @@ console.log('🎆 Sardanelli Produções — carregado com sucesso!');
 
 // ====== CONTATO FORM ======
 (function initContatoForm() {
-  const btn = document.getElementById('cf-submit');
-  const statusEl = document.getElementById('cf-status');
+  const btn       = document.getElementById('cf-submit');
+  const formWrap  = document.getElementById('cf-form-wrap');
+  const sucesso   = document.getElementById('cf-sucesso');
+  const waBtnWrap = document.getElementById('cf-whatsapp-btn-wrap');
+  const voltar    = document.getElementById('cf-voltar');
   if (!btn) return;
 
   btn.addEventListener('click', async () => {
     const nome     = document.getElementById('cf-nome').value.trim();
-    const email    = document.getElementById('cf-email').value.trim();
-    const telefone = document.getElementById('cf-telefone').value.trim();
+    const whatsapp = document.getElementById('cf-whatsapp').value.trim();
     const mensagem = document.getElementById('cf-mensagem').value.trim();
 
-    if (!nome || !email || !mensagem) {
-      statusEl.textContent = 'Por favor, preencha nome, e-mail e mensagem.';
-      statusEl.className = 'form-status error';
+    if (!nome || !whatsapp || !mensagem) {
+      // Marca campos vazios
+      ['cf-nome','cf-whatsapp','cf-mensagem'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) {
+          el.style.borderColor = '#f87171';
+          el.addEventListener('input', function fix() {
+            el.style.borderColor = '';
+            el.removeEventListener('input', fix);
+          });
+        }
+      });
       return;
     }
 
     btn.disabled = true;
     btn.textContent = 'Enviando…';
-    statusEl.textContent = '';
-    statusEl.className = 'form-status';
 
     try {
       const res = await fetch('https://sardanelli-contact.sardanelli.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email, telefone, mensagem })
+        body: JSON.stringify({ nome, email: '', telefone: whatsapp, mensagem })
       });
 
       if (res.ok) {
-        statusEl.textContent = '✓ Mensagem enviada! Entraremos em contato em breve.';
-        statusEl.className = 'form-status success';
-        ['cf-nome','cf-email','cf-telefone','cf-mensagem'].forEach(id => {
-          document.getElementById(id).value = '';
-        });
+        formWrap.style.display  = 'none';
+        if (waBtnWrap) waBtnWrap.style.display = 'none';
+        sucesso.style.display   = 'block';
       } else {
         throw new Error('erro');
       }
     } catch {
-      statusEl.textContent = 'Erro ao enviar. Tente pelo WhatsApp ou e-mail.';
-      statusEl.className = 'form-status error';
+      btn.disabled = false;
+      btn.textContent = 'Enviar';
+      ['cf-nome','cf-whatsapp','cf-mensagem'].forEach(id => {
+        document.getElementById(id).style.borderColor = '#f87171';
+      });
+      alert('Erro ao enviar. Tente novamente ou fale pelo WhatsApp.');
     }
-
-    btn.disabled = false;
-    btn.textContent = 'Enviar';
   });
+
+  if (voltar) {
+    voltar.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 })();
