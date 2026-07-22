@@ -607,7 +607,7 @@ console.log('🎆 Sardanelli Produções — carregado com sucesso!');
     statusEl.className = 'form-status';
 
     try {
-      const res = await fetch('https://sardanelli-contact.sardanelliproducoes.workers.dev', {
+      const res = await fetch('https://sardanelli-contact.sardanelli.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome, email, telefone, mensagem })
