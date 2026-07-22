@@ -582,3 +582,52 @@ console.log('🎆 Sardanelli Produções — carregado com sucesso!');
 
   loadGallery();
 })();
+
+// ====== CONTATO FORM ======
+(function initContatoForm() {
+  const btn = document.getElementById('cf-submit');
+  const statusEl = document.getElementById('cf-status');
+  if (!btn) return;
+
+  btn.addEventListener('click', async () => {
+    const nome     = document.getElementById('cf-nome').value.trim();
+    const email    = document.getElementById('cf-email').value.trim();
+    const telefone = document.getElementById('cf-telefone').value.trim();
+    const mensagem = document.getElementById('cf-mensagem').value.trim();
+
+    if (!nome || !email || !mensagem) {
+      statusEl.textContent = 'Por favor, preencha nome, e-mail e mensagem.';
+      statusEl.className = 'form-status error';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    statusEl.textContent = '';
+    statusEl.className = 'form-status';
+
+    try {
+      const res = await fetch('https://sardanelli-contact.sardanelliproducoes.workers.dev', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, email, telefone, mensagem })
+      });
+
+      if (res.ok) {
+        statusEl.textContent = '✓ Mensagem enviada! Entraremos em contato em breve.';
+        statusEl.className = 'form-status success';
+        ['cf-nome','cf-email','cf-telefone','cf-mensagem'].forEach(id => {
+          document.getElementById(id).value = '';
+        });
+      } else {
+        throw new Error('erro');
+      }
+    } catch {
+      statusEl.textContent = 'Erro ao enviar. Tente pelo WhatsApp ou e-mail.';
+      statusEl.className = 'form-status error';
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Enviar';
+  });
+})();

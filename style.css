@@ -1453,3 +1453,99 @@ ul {
   .gallery-lightbox-image { max-width: 94vw; max-height: 80vh; border-radius: 16px; }
   .gallery-lightbox-close { top: 16px; right: 16px; }
 }
+
+/* ===========================
+   CONTATO FORM
+   =========================== */
+.contato-form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contato-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contato-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contato-form-field input,
+.contato-form-field textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,186,0,0.18);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  outline: none;
+  transition: var(--transition);
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.contato-form-field input::placeholder,
+.contato-form-field textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.contato-form-field input:focus,
+.contato-form-field textarea:focus {
+  border-color: rgba(255,186,0,0.55);
+  background: rgba(255,186,0,0.04);
+  box-shadow: 0 0 0 3px rgba(255,186,0,0.08);
+}
+
+.contato-form-field textarea {
+  min-height: 140px;
+}
+
+.contato-form-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.contato-form-btn {
+  min-width: 200px;
+  justify-content: center;
+}
+
+.contato-form-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.form-status {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  min-height: 24px;
+  transition: var(--transition);
+}
+
+.form-status.success { color: #4ade80; }
+.form-status.error   { color: #f87171; }
+
+@media (max-width: 768px) {
+  .contato-form-row {
+    grid-template-columns: 1fr;
+  }
+  .contato-form-bottom {
+    justify-content: stretch;
+  }
+  .contato-form-btn {
+    width: 100%;
+  }
+}
