@@ -2,6 +2,30 @@
    SCRIPT.JS — Sardanelli Produções
    =========================== */
 
+// ====== CARREGAR VÍDEOS DO videos.json ======
+// Para adicionar ou remover vídeos, edite o arquivo videos.json no GitHub.
+// Basta colocar os IDs do YouTube (a parte após ?v= no link).
+(async function loadVideos() {
+  const grid = document.getElementById('videos-grid');
+  if (!grid) return;
+  try {
+    const res = await fetch('videos.json?v=' + Date.now());
+    const ids = await res.json();
+    grid.innerHTML = ids.map(id => `
+      <div class="video-thumb" id="yt-${id}" data-id="${id}">
+        <img src="https://img.youtube.com/vi/${id}/mqdefault.jpg" alt="Vídeo de evento Sardanelli Produções" loading="lazy" />
+        <div class="play-btn"><div class="play-icon"></div></div>
+      </div>
+    `).join('');
+    // Reaplica os listeners de clique após renderizar
+    grid.querySelectorAll('.video-thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => openModal(thumb.dataset.id));
+    });
+  } catch (e) {
+    console.error('Erro ao carregar vídeos:', e);
+  }
+})();
+
 // ====== PARTICLES (HERO) ======
 (function createParticles() {
   const container = document.getElementById('particles');
